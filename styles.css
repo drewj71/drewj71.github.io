@@ -5,7 +5,6 @@ body {
     color: #000;
     margin: 0;
     padding: 0;
-    margin-top: 60px;
 }
 
 .container {
@@ -26,17 +25,12 @@ p {
 }
 
 nav {
-    height: 60px;
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
 }
 
 .social-links {
@@ -87,6 +81,7 @@ nav {
 .fa-envelope,
 .fa-linkedin {
     font-size: 24px;
+    color: #fff;
 }
 
 /* Section styles */
