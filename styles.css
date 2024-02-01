@@ -9,9 +9,9 @@ body {
 
 .container {
     max-width: 960px;
-    /* Adjust as needed */
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
 }
 
 h1,
@@ -31,6 +31,12 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 50px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .social-links {
@@ -38,17 +44,14 @@ nav {
     margin: 0;
     padding: 0;
     display: flex;
-    /* Use flexbox to align items horizontally */
 }
 
 .social-links li {
-    margin-right: 10px;
-    /* Add spacing between social links */
+    margin-right: 20px;
 }
 
 .social-links li:last-child {
     margin-right: 0;
-    /* Remove margin from the last social link */
 }
 
 .main-menu {
@@ -56,17 +59,14 @@ nav {
     margin: 0;
     padding: 0;
     display: flex;
-    /* Use flexbox to align items horizontally */
 }
 
 .main-menu li {
     margin-left: 20px;
-    /* Add spacing between main menu items */
 }
 
 .main-menu li:first-child {
     margin-left: 0;
-    /* Remove margin from the first main menu item */
 }
 
 /* Style for social icons */
@@ -76,12 +76,10 @@ nav {
     font-size: 18px;
 }
 
-/* Adjust the size of social icons as needed */
 .fa-github,
 .fa-envelope,
 .fa-linkedin {
     font-size: 24px;
-    color: #fff;
 }
 
 /* Section styles */
@@ -94,15 +92,65 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
-    text-align: center;
 }
 
+.resume-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.resume-button:hover {
+    background-color: #555;
+}
+
+
 #home h1 {
-    text-align: center;
+    font-size: 60px;
     font-family: 'Roboto', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 0px;
 }
 
 #home p {
-    text-align: center;
+    font-size: 20px;
+    font-family: 'Roboto', monospace;
+}
+
+#about h2 {
+    font-size: 40px;
+}
+
+#about p {
+    font-size: 20px;
+    font-family: 'Roboto', monospace;
+}
+
+.classes-title {
+    margin-bottom: 5px;
+    font-weight: 800;
+}
+
+.class-container {
+    background-color: #333; 
+    padding: 10px; 
+    border-radius: 5px; 
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.class-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.class-list li {
+    display: inline;
+    margin-right: 10px;
+    color: white;
     font-family: 'Roboto', monospace;
 }
