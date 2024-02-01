@@ -1,67 +1,107 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5; /* Cream or off-white background */
-    color: #000; 
+    background-color: #f5f5f5;
+    /* Cream or off-white background */
+    color: #000;
     margin: 0;
     padding: 0;
-  }
-  
-  .container {
-    max-width: 960px; /* Adjust as needed */
+    margin-top: 60px;
+}
+
+.container {
+    max-width: 960px;
+    /* Adjust as needed */
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  h1, h2, h3 {
+}
+
+h1,
+h2,
+h3 {
     margin-top: 0;
-  }
-  
-  p {
+}
+
+p {
     margin-bottom: 20px;
-  }
-  
-  /* Navigation styles */
-  nav {
+}
+
+nav {
+    height: 60px;
     background-color: #333;
-    color: #fff; 
-    padding: 10px 0;
+    color: #fff;
+    padding: 10px 20px;
     display: flex;
-    justify-content: flex-end;
-  }
-  
-  nav ul {
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.social-links {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-  }
-  
-  nav ul li {
-    margin-right: 20px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #fff;
-  }
+    /* Use flexbox to align items horizontally */
+}
 
-  nav ul li:first-child {
+.social-links li {
+    margin-right: 10px;
+    /* Add spacing between social links */
+}
+
+.social-links li:last-child {
+    margin-right: 0;
+    /* Remove margin from the last social link */
+}
+
+.main-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Use flexbox to align items horizontally */
+}
+
+.main-menu li {
+    margin-left: 20px;
+    /* Add spacing between main menu items */
+}
+
+.main-menu li:first-child {
     margin-left: 0;
-  }
-  
-  /* Section styles */
-  .section {
+    /* Remove margin from the first main menu item */
+}
+
+/* Style for social icons */
+.social-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Adjust the size of social icons as needed */
+.fa-github,
+.fa-envelope,
+.fa-linkedin {
+    font-size: 24px;
+}
+
+/* Section styles */
+.section {
     margin-bottom: 40px;
-  }
-  
-  /* Footer styles */
-  footer {
-    background-color: #333; 
-    color: #fff; 
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
     padding: 20px 0;
     text-align: center;
-  }
-  
+}
+
 #home h1 {
     text-align: center;
     font-family: 'Roboto', sans-serif;
