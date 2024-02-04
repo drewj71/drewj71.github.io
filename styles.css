@@ -3,7 +3,6 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f5f5f5;
-    /* Cream or off-white background */
     color: #000;
     margin: 0;
     padding: 0;
@@ -16,9 +15,7 @@ body {
     text-align: center;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     margin-top: 0;
 }
 
@@ -41,63 +38,42 @@ nav {
     z-index: 1000;
 }
 
-nav a {
+nav a, .social-links li a {
     color: #fff;
     text-decoration: none;
 }
 
-.social-links {
+.social-links, .main-menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-.social-links li {
+.social-links li, .main-menu li {
     margin-right: 20px;
 }
 
-.social-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.social-links li:last-child {
-    margin-right: 0;
-}
-
-.main-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
 .main-menu li {
-    padding-right: 50px;
+    padding-right: 25px;
     font-family: 'Roboto', monospace;
     font-weight: 300;
 }
 
-.main-menu li:first-child {
-    margin-left: 0;
+@media screen and (max-width: 767px) {
+    nav {
+        padding-left: 10px;
+    }
 }
 
-
-
-.fa-github,
-.fa-envelope,
-.fa-linkedin {
+.fa-github, .fa-envelope, .fa-linkedin {
     font-size: 24px;
 }
 
-/* Section styles */
 .section {
     margin-bottom: 40px;
 }
 
-/* Footer styles */
 footer {
     background-color: #333;
     color: #fff;
@@ -119,35 +95,43 @@ footer {
     background-color: #555;
 }
 
-
 #home h1 {
     font-size: 60px;
     font-family: 'Protest Strike';
     font-weight: 400;
     margin-top: 100px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
-#home p {
+#home p, #about p, #certs p, #projects p {
     font-size: 20px;
     font-family: 'Roboto', monospace;
-    font-weight: 300;
 }
 
-#about h2 {
+#about h2, #certs h2, #projects h2 {
     font-size: 40px;
     font-weight: 500;
     font-family: 'Protest Strike';
+    text-align: center;
 }
 
-#about p {
-    font-size: 20px;
+#projects .container, #certs .container {
+    text-align: left;
+}
+
+#projects h3, #certs h3 {
+    font-size: 22px;
     font-family: 'Roboto', monospace;
+    font-weight: 700;
 }
 
-.classes-title {
-    margin-bottom: 5px;
-    font-weight: 800;
+#projects h3 a, #certs h3 a {
+    text-decoration: none;
+    color: #000;
+}
+
+#projects h3 a:hover, #certs h3 a:hover {
+    color: #555;
 }
 
 .class-container {
@@ -169,26 +153,4 @@ footer {
     display: inline;
     margin-right: 10px;
     color: white;
-}
-
-#projects .container {
-    text-align: left;
-}
-
-#projects h2 {
-    font-size: 40px;
-    text-align: center;
-    font-family: 'Protest Strike';
-    font-weight: 400;
-}
-
-#projects h3 {
-    font-size: 22px;
-    font-family: 'Roboto', monospace;
-    font-weight: 700;
-}
-
-#projects p {
-    font-family: 'Roboto', monospace;
-    font-weight: 300;
 }
