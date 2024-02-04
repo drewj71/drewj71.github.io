@@ -66,6 +66,49 @@ nav a, .social-links li a {
     }
 }
 
+/* Navbar styles */
+.navbar-toggle {
+    display: none; /* Hide by default on larger screens */
+    cursor: pointer;
+}
+
+/* Hamburger icon bars */
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate bars for 'X' icon when menu is open */
+.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(-45deg);
+}
+
+.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(45deg);
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 767px) {
+    .navbar-toggle {
+        display: block; /* Show hamburger icon on smaller screens */
+    }
+
+    .main-menu {
+        display: none; /* Hide menu by default on smaller screens */
+    }
+
+    .open .main-menu {
+        display: block; /* Show menu when toggle is open */
+    }
+}
+
 .fa-github, .fa-envelope, .fa-linkedin {
     font-size: 24px;
 }
