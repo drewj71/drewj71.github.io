@@ -11,6 +11,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 top: target.offsetTop - offset,
                 behavior: 'smooth'
             });
+
+            // Close the vertical menu on mobile devices
+            if (window.innerWidth <= 768) {
+                const hamburgerMenu = document.querySelector('.hamburger-menu');
+                const mainMenu = document.querySelector('.main-menu');
+                hamburgerMenu.classList.remove('active');
+                mainMenu.classList.remove('active');
+            }
         });
     });
 
