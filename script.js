@@ -11,26 +11,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 top: target.offsetTop - offset,
                 behavior: 'smooth'
             });
-
-            // Close the menu if it's open
-            document.querySelector('.main-menu').classList.remove('open');
         });
     });
 
-    // Toggle menu function
-    function toggleMenu() {
-        var menu = document.querySelector('.main-menu');
-        menu.classList.toggle('open');
-    }
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const mainMenu = document.querySelector('.main-menu');
+    const verticalMenu = document.querySelector('.vertical-menu');
 
-    // Add event listener to the navbar toggle button
-    document.querySelector('.navbar-toggle').addEventListener('click', toggleMenu);
-
-    // Add event listener to handle menu item clicks
-    document.querySelectorAll('.main-menu li a').forEach(item => {
-        item.addEventListener('click', toggleMenu);
+    // Toggle active class on hamburger icon and main menu
+    hamburgerMenu.addEventListener('click', function() {
+        this.classList.toggle('active');
+        mainMenu.classList.toggle('active');
     });
 
-    // Add toggleMenu function to global scope for onclick attribute
-    window.toggleMenu = toggleMenu;
+    // Close the vertical menu when clicking outside of it
+    document.addEventListener('click', function(e) {
+        const isMenuClicked = verticalMenu.contains(e.target);
+        const isHamburgerClicked = hamburgerMenu.contains(e.target);
+
+        if (!isMenuClicked && !isHamburgerClicked) {
+            hamburgerMenu.classList.remove('active');
+            mainMenu.classList.remove('active');
+        }
+    });
+
+    // Close the vertical menu if the screen size is increased
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) { // Adjust the threshold as needed
+            hamburgerMenu.classList.remove('active');
+            mainMenu.classList.remove('active');
+        }
+    });
 });

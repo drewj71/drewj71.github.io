@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Strike&family=Roboto+Mono:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -58,55 +59,6 @@ nav a, .social-links li a {
     padding-right: 25px;
     font-family: 'Roboto', monospace;
     font-weight: 300;
-}
-
-@media screen and (max-width: 767px) {
-    nav {
-        padding-left: 10px;
-    }
-}
-
-/* Navbar styles */
-.navbar-toggle {
-    display: none; /* Hide by default on larger screens */
-    cursor: pointer;
-}
-
-/* Hamburger icon bars */
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px 0;
-    transition: transform 0.3s ease;
-}
-
-/* Rotate bars for 'X' icon when menu is open */
-.open .bar:nth-child(1) {
-    transform: translateY(8px) rotate(-45deg);
-}
-
-.open .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.open .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(45deg);
-}
-
-/* Media query for smaller screens */
-@media screen and (max-width: 767px) {
-    .navbar-toggle {
-        display: block; /* Show hamburger icon on smaller screens */
-    }
-
-    .main-menu {
-        display: none; /* Hide menu by default on smaller screens */
-    }
-
-    .open .main-menu {
-        display: block; /* Show menu when toggle is open */
-    }
 }
 
 .fa-github, .fa-envelope, .fa-linkedin {
@@ -196,4 +148,61 @@ footer {
     display: inline;
     margin-right: 10px;
     color: white;
+}
+
+.main-menu {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .main-menu {
+        display: none;
+    }
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    display: none;
+    order: 1;
+    color: #fff;
+    padding-right: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+.vertical-menu {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    background-color: #333;
+    font-family: 'Roboto', monospace;
+}
+
+.vertical-menu li {
+    padding: 10px;
+    text-align: center;
+}
+
+.hamburger-menu.active + .vertical-menu {
+    display: block;
+}
+
+.close-icon {
+    display: none;
+}
+
+.hamburger-menu.active .close-icon {
+    display: inline-block;
+}
+
+.hamburger-menu.active .hamburger-icon {
+    display: none;
 }
